@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renegade — a client for Minecraft 1.21.11</title>
+<meta name="description" content="Renegade is a Fabric client for Minecraft 1.21.11 with its own launcher: one-click install, auto-updates, themes, a HUD editor and configs.">
+<meta property="og:title" content="Renegade — a client for Minecraft 1.21.11">
+<meta property="og:description" content="Own launcher, one-click install, auto-updates, themes, HUD editor.">
+<meta property="og:image" content="https://broulyy.github.io/img/menu.webp">
+<meta name="theme-color" content="#08080b">
+<link rel="alternate" hreflang="ru" href="https://broulyy.github.io/">
+<link rel="icon" href="/favicon.ico">
+<link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/RussoOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<canvas id="dots"></canvas>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo brand" href="/en/"><img src="/img/logo.png" alt="">RENEGADE</a>
+    <nav class="links top">
+      <a href="#features">Features</a>
+      <a href="#gallery">Screenshots</a>
+      <a href="#launcher">Launcher</a>
+      <a href="#updates">Updates</a>
+      <a href="#faq">FAQ</a>
+      <a href="/en/guide.html">Guide</a>
+    </nav>
+    <div class="lang"><a href="/">RU</a><a class="on" href="/en/">EN</a></div>
+    <a class="btn discord" href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9-.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2.1a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.7ZM8 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg><span>Discord</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <div class="glow" style="width:520px;height:420px;left:50%;top:-80px;transform:translateX(-50%);background:rgba(201,205,251,.16)"></div>
+    <div class="glow" style="width:380px;height:380px;right:-120px;top:240px;background:rgba(242,198,240,.10)"></div>
+    <span class="pill rv"><span class="dot"></span>Minecraft <b>1.21.11</b> · Fabric · Windows 10/11</span>
+    <h1 class="rv">RENEGA<span>DE</span></h1>
+    <p class="sub rv">A Minecraft client with its own launcher. One-click install, auto-updates and an interface you actually enjoy opening.</p>
+    <div class="cta rv">
+      <a class="btn primary big dl" href="https://github.com/Broulyy/renegade-releases/releases/latest/download/Renegade-Setup.exe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>DOWNLOAD
+      </a>
+      <a class="btn big" href="#gallery">Take a look</a>
+    </div>
+    <p class="meta rv dlmeta">Free · Windows installer</p>
+    <div class="shot rv"><img src="/img/menu.webp" alt="Renegade client menu" width="1600" height="900" fetchpriority="high"></div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head c rv">
+        <div class="kicker">Features</div>
+        <h2>Every detail thought through</h2>
+        <p class="lead">Not a pile of modules in a grey window, but a complete product — from the installer to the pause menu.</p>
+      </div>
+      <div class="grid">
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div><h3>Its own menu</h3><p>Categories, setting groups, search across every feature and keybind-conflict warnings.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/><path d="M12 3c2.5 2.5 2.5 15.5 0 18"/></svg></div><h3>Themes</h3><p>Obsidian, Violet, Crimson and more — colours blend smoothly on the fly.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h6"/><circle cx="18" cy="16" r="3"/></svg></div><h3>HUD editor</h3><p>Drag elements, resize them, snap to edges. The HUD moves itself so nothing overlaps.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M19 8v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7z"/><path d="M9 14h6M9 17h4"/></svg></div><h3>Configs</h3><p>Autosave and <b>.renegade</b> files: send a config to a friend — they open it with a double-click.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Stability</h3><p>If a feature throws an error, it switches itself off and the game keeps running. There is a debug page too.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14" opacity=".0"/><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8M12 18v3"/></svg></div><h3>Custom game UI</h3><p>Main menu, loading screen and pause menu in Renegade style instead of the vanilla ones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="head c rv">
+        <div class="kicker">Screenshots</div>
+        <h2>How it looks</h2>
+      </div>
+      <div class="tabs rv" id="tabs"></div>
+      <div class="viewer rv" id="viewer"></div>
+      <p class="cap" id="cap"></p>
+    </div>
+  </section>
+
+  <section id="launcher">
+    <div class="wrap split">
+      <div class="rv">
+        <div class="kicker">Launcher</div>
+        <h2>One click and you're in</h2>
+        <p class="lead">The launcher downloads Minecraft, Fabric and the client, verifies files and updates itself.</p>
+        <ul class="list">
+          <li><span><b>Resumable, verified downloads</b> — connection dropped? The download continues where it stopped.</span></li>
+          <li><span><b>Auto-updates</b> for the client and the launcher itself, with a changelog.</span></li>
+          <li><span><b>Crash report</b> — shows what went wrong and which mod is to blame.</span></li>
+          <li><span><b>Discord status</b> — play time and your UID.</span></li>
+        </ul>
+      </div>
+      <img class="rv" src="/img/launcher.webp" alt="Renegade launcher" loading="lazy" width="1680" height="1050">
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <img class="rv" src="/img/installer.webp" alt="Renegade installer" loading="lazy" width="930" height="630" style="border:0;box-shadow:none;width:100%;max-width:520px;justify-self:center">
+      <div class="rv">
+        <div class="kicker">Install</div>
+        <h2>Its own installer</h2>
+        <p class="lead">No stock Windows wizards and no admin rights. The game, worlds and settings are stored separately — nothing is lost on update or uninstall.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">Getting started</div><h2>Three steps</h2></div>
+      <div class="steps">
+        <div class="step rv"><h3>Download</h3><p>Press “Download” to get Renegade-Setup.exe.</p></div>
+        <div class="step rv"><h3>Install</h3><p>Run it, pick a folder and press “Установить” (Install).</p></div>
+        <div class="step rv"><h3>Play</h3><p>Press “PLAY” in the launcher. The client menu opens with <b>Right Shift</b>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compat">
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">Compatibility</div><h2>Plays nicely with your mods</h2>
+        <p class="lead">Tested together — the client sits alongside them and breaks nothing.</p></div>
+      <div class="mods rv">
+        <span>Sodium</span><span>Iris</span><span>Lithium</span><span>ViaFabricPlus</span><span>Sodium Extra</span><span>Reese's Sodium Options</span>
+        <span>Simple Voice Chat</span><span>Mod Menu</span><span>AppleSkin</span><span>Ok Zoomer</span><span>Cloth Config</span><span>YACL</span>
+        <span>Baritone API</span><span>Language Reload</span><span>Simple Armor HUD</span><span>Compact Chat</span>
+      </div>
+      <p class="cap rv">Put your own mods into the <b>mods</b> folder — there is a “Mods folder” button on the launcher's Mods tab.</p>
+    </div>
+  </section>
+
+  <section id="updates">
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">Updates</div><h2>What's new</h2><p class="lead">Pulled automatically from every release.</p></div>
+      <div class="log" id="log"><div class="skel"></div><div class="skel"></div></div>
+      <div class="more"><a class="btn" href="https://github.com/Broulyy/renegade-releases/releases" target="_blank" rel="noopener">All releases</a></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">FAQ</div><h2>Frequently asked questions</h2></div>
+      <div class="faq rv">
+        <details><summary>Is it free?</summary><p>Yes. Downloading and playing is free.</p></details>
+        <details><summary>What do I need?</summary><p>Windows 10 or 11 (64-bit). No need to install Java — the launcher downloads it on first start (about 95 MB, once). Accounts are chosen in the client menu.</p></details>
+        <details><summary>My antivirus complains about the installer — what now?</summary><p>The installer is new and not code-signed yet, so Windows SmartScreen may show a warning: click “More info” → “Run anyway”. Only download it from this site or our Discord.</p></details>
+        <details><summary>Where are my settings and worlds?</summary><p>In <b>%APPDATA%\.renegade</b>. Neither updates nor uninstalling the launcher touch it.</p></details>
+        <details><summary>Which mods does it work with?</summary><p>Tested with Sodium, Iris, Lithium, ViaFabricPlus, Sodium Extra, Voice Chat, Mod Menu and other popular 1.21.11 mods — see the list above.</p></details>
+        <details><summary>How do I uninstall it?</summary><p>Windows Settings → Apps → Renegade → Uninstall. Our uninstall window opens.</p></details>
+        <details><summary>Can I get banned on a server?</summary><p>Many servers forbid third-party clients in their rules. Read the server rules before playing — you are responsible for how you use it.</p></details>
+        <details><summary>Found a bug or have an idea?</summary><p>Write to us on <a href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener" style="color:var(--acc)">Discord</a> — attach the launcher crash report if there is one.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="final rv">
+      <h2>Ready to try it?</h2>
+      <p class="lead" style="margin:0 auto">Installation takes less than a minute.</p>
+      <div class="cta">
+        <a class="btn big" href="/en/guide.html">Guide</a>
+        <a class="btn primary big dl" href="https://github.com/Broulyy/renegade-releases/releases/latest/download/Renegade-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>DOWNLOAD</a>
+        <a class="btn big discord" href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener">Our Discord</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo brand" style="font-size:15px"><img src="/img/logo.png" alt="" style="width:26px;height:26px">RENEGADE</span>
+    <span>Not affiliated with Mojang or Microsoft.</span>
+    <nav class="links">
+      <a href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener">Discord</a>
+      <a href="https://github.com/Broulyy/renegade-releases/releases" target="_blank" rel="noopener">Releases</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script src="/site.js"></script>
+</body>
+</html>

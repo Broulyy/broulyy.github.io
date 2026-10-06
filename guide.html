@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Инструкция — Renegade</title>
+<meta name="description" content="Как установить Renegade: скачивание, предупреждение Windows, первый запуск, где лежат файлы, удаление и частые проблемы.">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" href="/favicon.ico">
+<link rel="alternate" hreflang="en" href="https://broulyy.github.io/en/guide.html">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<canvas id="dots"></canvas>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo brand" href="/"><img src="/img/logo.png" alt="">RENEGADE</a>
+    <nav class="links top">
+      <a href="/">Главная</a>
+      <a href="/#updates">Обновления</a>
+      <a href="/#faq">Вопросы</a>
+    </nav>
+    <div class="lang"><a class="on" href="/guide.html">RU</a><a href="/en/guide.html">EN</a></div>
+  </div>
+</header>
+
+<main class="guide">
+  <div class="kicker rv">Инструкция</div>
+  <h1 class="rv">Как установить Renegade</h1>
+  <p class="lead rv">Пять минут от скачивания до игры. Если что-то пошло не так — загляни в «Проблемы» внизу.</p>
+  <nav class="toc rv">
+    <a href="#download">1. Скачать</a><a href="#smartscreen">2. Предупреждение Windows</a><a href="#install">3. Установка</a>
+    <a href="#first">4. Первый запуск</a><a href="#play">5. Игра</a><a href="#files">Файлы и конфиги</a><a href="#remove">Удаление</a><a href="#problems">Проблемы</a>
+  </nav>
+
+  <section class="gstep rv" id="download">
+    <div class="n">1</div>
+    <h2>Скачай установщик</h2>
+    <p>Нажми кнопку — загрузится <b>Renegade-Setup.exe</b>. Нужна Windows 10 или 11 (64-бит).</p>
+    <div class="cta" style="justify-content:flex-start;margin-top:18px">
+      <a class="btn primary dl" href="https://github.com/Broulyy/renegade-releases/releases/latest/download/Renegade-Setup.exe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Скачать</a>
+    </div>
+    <p class="meta dlmeta" style="text-align:left">Бесплатно · Windows 10/11</p>
+    <p class="note">Скачивай только с этого сайта или из нашего Discord. Копии с других сайтов могут быть изменены.</p>
+  </section>
+
+  <section class="gstep rv" id="smartscreen">
+    <div class="n">2</div>
+    <h2>Если Windows показывает предупреждение</h2>
+    <p>Установщик пока не подписан платным сертификатом, поэтому фильтр SmartScreen может показать синее окно «Windows защитил ваш компьютер». Это не значит, что найден вирус — Windows просто ещё «не знает» файл.</p>
+    <ol>
+      <li>Нажми ссылку <b>«Подробнее»</b>.</li>
+      <li>Появится кнопка <b>«Выполнить в любом случае»</b> — нажми её.</li>
+    </ol>
+    <div class="ss" aria-hidden="true">
+      <div class="ss-body"><h4>Windows защитил ваш компьютер</h4><p>Фильтр SmartScreen предотвратил запуск неопознанного приложения…</p><p style="margin-top:10px"><u>Подробнее</u></p></div>
+      <div class="ss-foot"><span class="hl">Выполнить в любом случае</span><span>Не выполнять</span></div>
+    </div>
+    <p class="ss-cap">Схема окна: пунктиром отмечено, куда нажимать.</p>
+  </section>
+
+  <section class="gstep rv" id="install">
+    <div class="n">3</div>
+    <h2>Установка</h2>
+    <p>Откроется окно установки. Папку можно оставить как есть, ярлыки — по желанию. Нажми <b>«Установить»</b> — через полминуты появится кнопка «Запустить».</p>
+    <p>Права администратора не нужны. Если Renegade уже стоит, вместо «Установить» будет «Обновить» — настройки и миры сохранятся.</p>
+    <img class="pic bare" src="/img/installer.webp" alt="Окно установки Renegade" loading="lazy" width="930" height="630">
+  </section>
+
+  <section class="gstep rv" id="first">
+    <div class="n">4</div>
+    <h2>Первый запуск</h2>
+    <p>При самом первом запуске лаунчер скачает Java (около 95 МБ) — это нужно один раз. Если интернет оборвётся, нажми «Повторить»: уже скачанное не пропадёт.</p>
+    <p>Затем при нажатии «Играть» лаунчер сам скачает Minecraft 1.21.11, Fabric и клиент.</p>
+    <img class="pic" src="/img/java.webp" alt="Подготовка к первому запуску" loading="lazy" width="1120" height="700">
+  </section>
+
+  <section class="gstep rv" id="play">
+    <div class="n">5</div>
+    <h2>Играй</h2>
+    <p>Нажми <b>«Играть»</b>. Когда игра откроется, меню клиента открывается клавишей <b>Right Shift</b> (правый Shift). Там же — аккаунты, темы, редактор HUD и конфиги.</p>
+    <img class="pic" src="/img/launcher.webp" alt="Лаунчер Renegade" loading="lazy" width="1680" height="1050">
+    <img class="pic" src="/img/menu.webp" alt="Меню клиента" loading="lazy" width="1600" height="900">
+  </section>
+
+  <section class="gstep rv" id="files">
+    <div class="n">★</div>
+    <h2>Где лежат файлы и как поделиться конфигом</h2>
+    <div class="paths">
+      <div><code>%APPDATA%\.renegade</code><span>игра, миры, скриншоты, моды</span></div>
+      <div><code>%APPDATA%\.renegade\config\renegade</code><span>конфиги и аккаунты клиента</span></div>
+      <div><code>%LOCALAPPDATA%\Programs\Renegade</code><span>сам лаунчер</span></div>
+    </div>
+    <p style="margin-top:14px">Чтобы открыть папку, вставь путь в адресную строку Проводника или нажми Win+R. В лаунчере слева есть кнопка с папкой — она открывает папку игры.</p>
+    <p><b>Поделиться конфигом:</b> в меню клиента → <b>Configs</b> → «В файл». На рабочем столе появится файл <code>.renegade</code> — отправь его другу. Он откроет его двойным кликом, и конфиг появится у него в игре.</p>
+    <p><b>Свои моды</b> (Sodium, Iris и другие для 1.21.11) клади в папку <code>mods</code> — в лаунчере во вкладке модов есть кнопка «Папка mods».</p>
+  </section>
+
+  <section class="gstep rv" id="remove">
+    <div class="n">✕</div>
+    <h2>Удаление</h2>
+    <p>Параметры Windows → Приложения → <b>Renegade</b> → Удалить. Откроется окно удаления Renegade. Игра, миры, конфиги и аккаунты (папка <code>.renegade</code>) остаются — их можно удалить вручную.</p>
+  </section>
+
+  <section class="gstep rv" id="problems">
+    <div class="n">?</div>
+    <h2>Проблемы</h2>
+    <ul>
+      <li><b>Антивирус удалил файл или не даёт запустить.</b> Добавь папку Renegade в исключения антивируса и скачай установщик заново.</li>
+      <li><b>Окно установщика не реагирует.</b> Открой Диспетчер задач (Ctrl+Shift+Esc), закрой все процессы «Renegade» и запусти установщик ещё раз. Журнал установки — <code>%TEMP%\renegade-setup.log</code>.</li>
+      <li><b>«Не удалось скачать Java».</b> Проверь интернет и VPN, нажми «Повторить».</li>
+      <li><b>Игра вылетела.</b> Лаунчер покажет окно с причиной и подозрительным модом. Нажми «Отправить логи» — лаунчер соберёт их и откроет наш Discord.</li>
+      <li><b>Другое</b> — пиши в <a href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener" style="color:var(--acc)">наш Discord</a>.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo brand" style="font-size:15px"><img src="/img/logo.png" alt="" style="width:26px;height:26px">RENEGADE</span>
+    <span>Не связан с Mojang или Microsoft.</span>
+    <nav class="links">
+      <a href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener">Discord</a>
+      <a href="https://github.com/Broulyy/renegade-releases/releases" target="_blank" rel="noopener">Выпуски</a>
+    </nav>
+  </div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>

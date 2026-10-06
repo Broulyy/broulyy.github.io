@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renegade — клиент для Minecraft 1.21.11</title>
+<meta name="description" content="Renegade — клиент для Minecraft 1.21.11 на Fabric со своим лаунчером: установка в один клик, автообновления, темы, редактор HUD и конфиги.">
+<meta property="og:title" content="Renegade — клиент для Minecraft 1.21.11">
+<meta property="og:description" content="Свой лаунчер, установка в один клик, автообновления, темы, редактор HUD.">
+<meta property="og:image" content="https://broulyy.github.io/img/menu.webp">
+<meta name="theme-color" content="#08080b">
+<link rel="alternate" hreflang="en" href="https://broulyy.github.io/en/">
+<link rel="icon" href="/favicon.ico">
+<link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/RussoOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<canvas id="dots"></canvas>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo brand" href="/"><img src="/img/logo.png" alt="">RENEGADE</a>
+    <nav class="links top">
+      <a href="#features">Возможности</a>
+      <a href="#gallery">Скриншоты</a>
+      <a href="#launcher">Лаунчер</a>
+      <a href="#updates">Обновления</a>
+      <a href="#faq">Вопросы</a>
+      <a href="/guide.html">Инструкция</a>
+      <a href="/account.html">Кабинет</a>
+    </nav>
+    <div class="lang"><a class="on" href="/">RU</a><a href="/en/">EN</a></div>
+    <a class="btn discord" href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9-.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2.1a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.7ZM8 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg><span>Discord</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <div class="glow" style="width:520px;height:420px;left:50%;top:-80px;transform:translateX(-50%);background:rgba(201,205,251,.16)"></div>
+    <div class="glow" style="width:380px;height:380px;right:-120px;top:240px;background:rgba(242,198,240,.10)"></div>
+    <span class="pill rv"><span class="dot"></span>Minecraft <b>1.21.11</b> · Fabric · Windows 10/11</span>
+    <h1 class="rv">RENEGA<span>DE</span></h1>
+    <p class="sub rv">Клиент для Minecraft со своим лаунчером. Установка в один клик, автообновления и интерфейс, который приятно открывать.</p>
+    <div class="cta rv">
+      <a class="btn primary big dl" href="https://github.com/Broulyy/renegade-releases/releases/latest/download/Renegade-Setup.exe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>СКАЧАТЬ
+      </a>
+      <a class="btn big" href="#gallery">Смотреть</a>
+    </div>
+    <p class="meta rv dlmeta">Бесплатно · установщик для Windows</p>
+    <div class="shot rv"><img src="/img/menu.webp" alt="Меню клиента Renegade" width="1600" height="900" fetchpriority="high"></div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head c rv">
+        <div class="kicker">Возможности</div>
+        <h2>Всё продумано до мелочей</h2>
+        <p class="lead">Не набор модулей в сером окошке, а цельный продукт: от установщика до меню паузы.</p>
+      </div>
+      <div class="grid">
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div><h3>Своё меню</h3><p>Категории, группы настроек, поиск по всем функциям и предупреждения о конфликтах биндов.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/><path d="M12 3c2.5 2.5 2.5 15.5 0 18"/></svg></div><h3>Темы</h3><p>Obsidian, Violet, Crimson и другие — с плавным переходом цветов прямо на лету.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h6"/><circle cx="18" cy="16" r="3"/></svg></div><h3>Редактор HUD</h3><p>Перетаскивай элементы, меняй размер, привязка к краям. HUD сам отодвигается, чтобы ничего не перекрывалось.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M19 8v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7z"/><path d="M9 14h6M9 17h4"/></svg></div><h3>Конфиги</h3><p>Автосохранение и файлы <b>.renegade</b>: отправь конфиг другу — он откроет его двойным кликом.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Стабильность</h3><p>Если функция падает с ошибкой, она отключается сама — игра продолжает работать. Есть страница отладки.</p></div>
+        <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14" opacity=".0"/><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8M12 18v3"/></svg></div><h3>Свой интерфейс игры</h3><p>Главное меню, экран загрузки и меню паузы в стиле Renegade вместо стандартных.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="head c rv">
+        <div class="kicker">Скриншоты</div>
+        <h2>Как это выглядит</h2>
+      </div>
+      <div class="tabs rv" id="tabs"></div>
+      <div class="viewer rv" id="viewer"></div>
+      <p class="cap" id="cap"></p>
+    </div>
+  </section>
+
+  <section id="launcher">
+    <div class="wrap split">
+      <div class="rv">
+        <div class="kicker">Лаунчер</div>
+        <h2>Один клик — и ты в игре</h2>
+        <p class="lead">Лаунчер сам скачивает Minecraft, Fabric и клиент, проверяет файлы и обновляется.</p>
+        <ul class="list">
+          <li><span><b>Докачка и проверка файлов</b> — оборвался интернет? Загрузка продолжится с того же места.</span></li>
+          <li><span><b>Автообновления</b> клиента и самого лаунчера со списком изменений.</span></li>
+          <li><span><b>Отчёт о вылете</b> — покажет, что пошло не так и какой мод виноват.</span></li>
+          <li><span><b>Статус в Discord</b> — время в игре и твой UID.</span></li>
+        </ul>
+      </div>
+      <img class="rv" src="/img/launcher.webp" alt="Лаунчер Renegade" loading="lazy" width="1680" height="1050">
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <img class="rv" src="/img/installer.webp" alt="Установщик Renegade" loading="lazy" width="930" height="630" style="border:0;box-shadow:none;width:100%;max-width:520px;justify-self:center">
+      <div class="rv">
+        <div class="kicker">Установка</div>
+        <h2>Свой установщик</h2>
+        <p class="lead">Без стандартных окон Windows и без прав администратора. Игра, миры и настройки хранятся отдельно — при обновлении и удалении ничего не пропадёт.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">Как начать</div><h2>Три шага</h2></div>
+      <div class="steps">
+        <div class="step rv"><h3>Скачай</h3><p>Нажми «Скачать» — загрузится Renegade-Setup.exe.</p></div>
+        <div class="step rv"><h3>Установи</h3><p>Запусти файл, выбери папку и нажми «Установить».</p></div>
+        <div class="step rv"><h3>Играй</h3><p>Нажми «Играть» в лаунчере. Меню клиента — на <b>Right Shift</b>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compat">
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">Совместимость</div><h2>Дружит с твоими модами</h2>
+        <p class="lead">Проверено вместе — клиент встаёт рядом и ничего не ломает.</p></div>
+      <div class="mods rv">
+        <span>Sodium</span><span>Iris</span><span>Lithium</span><span>ViaFabricPlus</span><span>Sodium Extra</span><span>Reese's Sodium Options</span>
+        <span>Simple Voice Chat</span><span>Mod Menu</span><span>AppleSkin</span><span>Ok Zoomer</span><span>Cloth Config</span><span>YACL</span>
+        <span>Baritone API</span><span>Language Reload</span><span>Simple Armor HUD</span><span>Compact Chat</span>
+      </div>
+      <p class="cap rv">Свои моды кладутся в папку <b>mods</b> — кнопка «Папка mods» во вкладке модов лаунчера.</p>
+    </div>
+  </section>
+
+  <section id="updates">
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">Обновления</div><h2>Что нового</h2><p class="lead">Список подтягивается автоматически с каждого выпуска.</p></div>
+      <div class="log" id="log"><div class="skel"></div><div class="skel"></div></div>
+      <div class="more"><a class="btn" href="https://github.com/Broulyy/renegade-releases/releases" target="_blank" rel="noopener">Все выпуски</a></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="head c rv"><div class="kicker">Вопросы</div><h2>Частые вопросы</h2></div>
+      <div class="faq rv">
+        <details><summary>Это бесплатно?</summary><p>Да. Скачать и играть можно бесплатно.</p></details>
+        <details><summary>Какая нужна система?</summary><p>Windows 10 или 11 (64-бит). Java ставить не нужно — при первом запуске лаунчер сам скачает её (около 95 МБ, один раз). Нужна лицензия Minecraft или пиратский аккаунт — выбирается в меню клиента.</p></details>
+        <details><summary>Антивирус ругается на установщик — что делать?</summary><p>Установщик новый и пока не подписан сертификатом, поэтому Windows SmartScreen может показать предупреждение: нажми «Подробнее» → «Выполнить в любом случае». Скачивай только по кнопке на этом сайте или в нашем Discord.</p></details>
+        <details><summary>Где хранятся мои настройки и миры?</summary><p>В папке <b>%APPDATA%\.renegade</b>. Её не трогают ни обновления, ни удаление лаунчера.</p></details>
+        <details><summary>С какими модами работает?</summary><p>Проверено с Sodium, Iris, Lithium, ViaFabricPlus, Sodium Extra, Voice Chat, Mod Menu и другими популярными модами для 1.21.11 — список выше.</p></details>
+        <details><summary>Как удалить?</summary><p>Параметры Windows → Приложения → Renegade → Удалить. Откроется наше окно удаления.</p></details>
+        <details><summary>Можно ли получить бан на сервере?</summary><p>Многие серверы запрещают сторонние клиенты в правилах. Перед игрой ознакомься с правилами сервера — ответственность за использование лежит на тебе.</p></details>
+        <details><summary>Нашёл баг или есть идея</summary><p>Пиши в наш <a href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener" style="color:var(--acc)">Discord</a> — приложи отчёт о вылете из лаунчера, если он есть.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="final rv">
+      <h2>Готов попробовать?</h2>
+      <p class="lead" style="margin:0 auto">Установка занимает меньше минуты.</p>
+      <div class="cta">
+        <a class="btn big" href="/guide.html">Инструкция</a>
+        <a class="btn primary big dl" href="https://github.com/Broulyy/renegade-releases/releases/latest/download/Renegade-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>СКАЧАТЬ</a>
+        <a class="btn big discord" href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener">Наш Discord</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo brand" style="font-size:15px"><img src="/img/logo.png" alt="" style="width:26px;height:26px">RENEGADE</span>
+    <span>Не связан с Mojang или Microsoft.</span>
+    <nav class="links">
+      <a href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener">Discord</a>
+      <a href="https://github.com/Broulyy/renegade-releases/releases" target="_blank" rel="noopener">Выпуски</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script src="/site.js"></script>
+</body>
+</html>

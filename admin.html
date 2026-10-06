@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Админка — Renegade</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/account.css">
+</head>
+<body>
+<canvas id="dots"></canvas>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo brand" href="/"><img src="/img/logo.png" alt="">RENEGADE</a>
+    <nav class="links top"><a href="/account.html">Кабинет</a><a href="/">На главную</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap acc-wrap">
+    <div class="head c">
+      <div class="kicker">Только для владельца</div>
+      <h2>Подписки</h2>
+      <p class="lead">Выдать доступ, продлить, забанить, сбросить привязку компьютера.</p>
+    </div>
+
+    <!-- Админ-токен -->
+    <section id="auth-view" hidden>
+      <form class="card acc-card" id="auth-form" style="max-width:520px;margin:0 auto">
+        <p class="acc-warn">Админ-токен даёт полный доступ к подпискам. Не вводи его на чужом компьютере: он хранится только до закрытия вкладки.</p>
+        <label>ADMIN_TOKEN
+          <input id="admin-token" type="password" required autocomplete="off" spellcheck="false">
+        </label>
+        <button class="btn primary big" type="submit">Продолжить</button>
+        <p class="acc-msg" id="auth-msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="panel-view" hidden>
+      <div class="acc-grid">
+        <div class="card acc-card">
+          <h3>Выдать или продлить</h3>
+          <p class="note">Если логина ещё нет — создаётся новый аккаунт, пароль обязателен. Если есть — продлевается подписка; продление считается от конца текущей, а не от сегодня.</p>
+          <form id="user-form">
+            <label>Логин
+              <input id="u-login" required maxlength="64" spellcheck="false" autocomplete="off">
+            </label>
+            <div class="acc-row">
+              <label>Пароль <span class="note">для нового</span>
+                <input id="u-pass" type="text" maxlength="256" autocomplete="off" spellcheck="false">
+              </label>
+              <label>Группа
+                <input id="u-group" maxlength="32" placeholder="user" autocomplete="off" spellcheck="false">
+              </label>
+            </div>
+            <div class="acc-row">
+              <label>Срок, дней
+                <select id="u-days">
+                  <option value="">— не менять —</option>
+                  <option value="7">7 дней</option>
+                  <option value="30" selected>30 дней</option>
+                  <option value="90">90 дней</option>
+                  <option value="365">год</option>
+                </select>
+              </label>
+              <label>Или точная дата
+                <input id="u-until" type="date">
+              </label>
+            </div>
+            <div class="acc-checks">
+              <label><input id="u-reset" type="checkbox"> сбросить привязку ПК (платная смена компьютера)</label>
+              <label><input id="u-revoke" type="checkbox"> разлогинить везде</label>
+            </div>
+            <button class="btn primary" type="submit">Применить</button>
+            <p class="acc-msg" id="user-msg" role="status" aria-live="polite"></p>
+            <pre class="acc-out" id="user-out" hidden></pre>
+          </form>
+        </div>
+
+        <div class="card acc-card">
+          <h3>Забрать доступ</h3>
+          <p class="note">Ставит дату окончания в прошлое и разлогинивает все устройства. Клиент перестанет запускаться — но до двух суток может работать на сохранённом ключе, если у игрока нет связи.</p>
+          <form id="ban-form">
+            <label>Логин
+              <input id="b-login" required maxlength="64" spellcheck="false" autocomplete="off">
+            </label>
+            <button class="btn" type="submit">Забрать доступ</button>
+            <p class="acc-msg" id="ban-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="card acc-card">
+          <h3>Персональное ядро версии</h3>
+          <p class="note">Загрузить jar ядра на сервер. После этого версия работает в персональном режиме: у каждого подписчика свой ключ и своя копия. Файл jar — тот же, что лежит в выпуске. Для версий, которые уже выпущены с общим ключом (например 0.3.9), это не нужно.</p>
+          <form id="core-form">
+            <label>Версия ядра
+              <input id="c-ver" required maxlength="32" placeholder="0.4.0" spellcheck="false" autocomplete="off">
+            </label>
+            <label>Файл ядра (renegade-X.jar)
+              <input id="c-file" type="file" accept=".jar" required>
+            </label>
+            <button class="btn" type="submit">Загрузить на сервер</button>
+            <p class="acc-msg" id="core-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="card acc-card">
+          <h3>Ключ версии ядра</h3>
+          <p class="note">Обычно это делает сборка выпуска сама. Вручную — если ключ потерялся или версию публиковали руками. Без ключа игроки получат «неизвестная версия».</p>
+          <form id="key-form">
+            <label>Версия ядра
+              <input id="k-ver" required maxlength="32" placeholder="0.3.9" spellcheck="false" autocomplete="off">
+            </label>
+            <label>Ключ (64 hex)
+              <input id="k-hex" required maxlength="64" type="password" spellcheck="false" autocomplete="off">
+            </label>
+            <button class="btn" type="submit">Зарегистрировать</button>
+            <p class="acc-msg" id="key-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="card acc-card" style="margin-top:18px">
+        <h3>Кто получал ключи</h3>
+        <p class="note">Журнал выдачи ядра. Если клиент утёк, здесь видно, через какие аккаунты его получали. Метка с номером аккаунта лежит и внутри самого ядра в памяти — она видна в слитом дампе.</p>
+        <button class="btn" id="log-btn" type="button">Показать последние 100</button>
+        <p class="acc-msg" id="log-msg" role="status" aria-live="polite"></p>
+        <ul class="acc-list" id="log-list"></ul>
+      </div>
+
+      <div class="card acc-card" style="margin-top:18px">
+        <h3>Подозрение на шаринг</h3>
+        <p class="note">Аккаунты, выдавшие ключ ядра на подозрительно много разных ПК (признак передачи доступа). Лимит — 1 ПК на аккаунт, поэтому несколько разных ПК набегает через платные отвязки: много устройств = повод проверить и при необходимости забрать доступ.</p>
+        <button class="btn" id="anom-btn" type="button">Показать (от 3 ПК)</button>
+        <p class="acc-msg" id="anom-msg" role="status" aria-live="polite"></p>
+        <ul class="acc-list" id="anom-list"></ul>
+      </div>
+
+      <div class="acc-foot">
+        <button class="btn" id="forget-btn" type="button">Забыть токен</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo brand" style="font-size:15px"><img src="/img/logo.png" alt="" style="width:26px;height:26px">RENEGADE</span>
+    <span>Служебная страница.</span>
+    <nav class="links"><a href="/account.html">Кабинет</a></nav>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
+<script src="/admin.js"></script>
+</body>
+</html>

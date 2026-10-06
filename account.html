@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабинет — Renegade</title>
+<meta name="description" content="Личный кабинет Renegade: подписка, привязанный компьютер, смена пароля.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" href="/favicon.ico">
+<link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/RussoOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/account.css">
+</head>
+<body>
+<canvas id="dots"></canvas>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo brand" href="/"><img src="/img/logo.png" alt="">RENEGADE</a>
+    <nav class="links top">
+      <a href="/">На главную</a>
+      <a href="/guide.html">Инструкция</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap acc-wrap">
+    <div class="glow" style="width:420px;height:420px;left:-140px;top:60px;background:rgba(201,205,251,.10)"></div>
+
+    <!-- Вход -->
+    <section id="login-view" hidden>
+      <div class="head c">
+        <div class="kicker">Кабинет</div>
+        <h2>Вход в аккаунт</h2>
+        <p class="lead">Тот же аккаунт, что и в лаунчере.</p>
+      </div>
+      <form class="card acc-card" id="login-form" autocomplete="on">
+        <label>Логин
+          <input id="login" name="username" autocomplete="username" required maxlength="64" spellcheck="false">
+        </label>
+        <label>Пароль
+          <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="256">
+        </label>
+        <!-- Проверка «я не робот»: обычно проходит сама, видимой становится при подозрительном входе -->
+        <div id="captcha" class="acc-captcha"></div>
+        <button class="btn primary big" type="submit" id="login-btn">Войти</button>
+        <p class="acc-msg" id="login-msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- Профиль -->
+    <section id="profile-view" hidden>
+      <div class="head c">
+        <div class="kicker">Кабинет</div>
+        <h2 id="hello">Аккаунт</h2>
+        <p class="lead" id="sub-line">—</p>
+      </div>
+
+      <div class="acc-grid">
+        <div class="card acc-card">
+          <h3>Подписка</h3>
+          <p class="acc-big" id="sub-until">—</p>
+          <p class="note" id="sub-note">—</p>
+        </div>
+
+        <div class="card acc-card">
+          <h3>Компьютер</h3>
+          <p class="note" id="unbind-note">Клиент работает на одном компьютере.</p>
+          <ul class="acc-list" id="devices"></ul>
+          <button class="btn" id="unbind-btn" type="button">Отвязать компьютер</button>
+          <p class="acc-msg" id="unbind-msg" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="card acc-card">
+          <h3>Пароль</h3>
+          <form id="pw-form">
+            <label>Текущий пароль
+              <input id="pw-old" type="password" autocomplete="current-password" required maxlength="256">
+            </label>
+            <label>Новый пароль <span class="note">не короче 8 символов</span>
+              <input id="pw-new" type="password" autocomplete="new-password" required minlength="8" maxlength="256">
+            </label>
+            <button class="btn" type="submit">Сменить пароль</button>
+            <p class="acc-msg" id="pw-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="acc-foot">
+        <button class="btn" id="logout-btn" type="button">Выйти</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo brand" style="font-size:15px"><img src="/img/logo.png" alt="" style="width:26px;height:26px">RENEGADE</span>
+    <span>Не связан с Mojang или Microsoft.</span>
+    <nav class="links">
+      <a href="https://discord.gg/bZ93QBgY3J" target="_blank" rel="noopener">Discord</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=rgCaptchaReady" async defer></script>
+<script src="/account.js"></script>
+</body>
+</html>
